@@ -1,0 +1,253 @@
+:root{
+    --main-color: #111;
+    --black-color: #181818;
+    --light-black-color: #383838;
+    --red-color: #EC2127;
+    --white-color: #fff;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    scroll-behavior: smooth;
+}
+
+/* Start Navbar */
+
+.navbar-brand{
+    color: var(--red-color);
+}
+
+.navbar-brand:hover{
+    color: var(--red-color);
+}
+
+.navbar-brand:not(:hover){
+    color: var(--red-color);
+}
+
+.collapse{
+    justify-content: end;
+}
+
+.nav-link{
+    color: var(--white-color) !important;
+    padding: 0.5rem 1rem !important;
+}
+
+.nav-link:hover{
+    color: var(--red-color) !important;
+    transition: color 0.5s;
+}
+
+.navbar-dark .navbar-toggler{
+    border-color: rgb(236, 33, 39);
+}
+
+.navbar-dark .navbar-toggler-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28236, 33, 39, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* End Navbar */
+
+/* Start Main Section */
+
+.main-section{
+    background-color: var(--main-color);
+    background-image: url(../images/BGTL.png), url(../images/BGBL.png);
+    background-position: 0% 0%, 0% 100%;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100%, 40%;
+}
+
+.main-section .container > div:first-child > .btn{
+    background-color: var(--red-color);
+    border-radius: 20px;
+    color: var(--white-color);
+    transition: all 0.25s;
+}
+
+.main-section .container > div:first-child > .btn:hover{
+    border-color: var(--red-color);
+    background-color: var(--white-color);
+    color: var(--red-color);
+}
+
+.main-section .container h1{
+    font-weight: 700;
+}
+
+.main-section .container h1 span{
+    color: var(--red-color);
+}
+
+@media (min-width: 992px) {
+    .main-section{
+        height: calc(100vh - 70px);
+        background-image: url(../images/dots.png), url(../images/BGRED.png), url(../images/BGTL.png), url(../images/BGBL.png);
+        background-position: 75% 57%, 100% 0%, 0% 0%, 0% 100%;
+        background-repeat: no-repeat, repeat-y, no-repeat, no-repeat;
+        background-size: 8%, 17%, 30%, 12%;
+    }
+}
+
+/* End Main Section */
+
+/* Start Portfolio */
+
+.portfolio .container .card{
+    position: relative;
+    background-color: var(--black-color);
+    border-color: var(--red-color);
+    width: 100%;
+    transition: all 0.25s;
+}
+
+.portfolio .container .card:hover{
+    cursor: pointer;
+    transform: translateY(-20px);
+}
+
+.portfolio .container .card a{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.portfolio .container .card .card-title{
+    color: var(--red-color);
+}
+
+.portfolio .container .card .row span{
+    background-color: var(--red-color);
+    border-radius: 15px;
+}
+
+.portfolio .container .card img{
+    height: 210px;
+}
+
+@media (min-width: 480px) {
+    .portfolio .container .card{
+        width: 70%;
+    }
+}
+
+@media (min-width: 576px) {
+    .portfolio .container .card{
+        width: 20rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .portfolio .container .portfolio-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .portfolio .container .portfolio-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 50px;
+    }
+}
+
+/* End Portfolio */
+
+/* Start Skills */
+
+.skills{
+    background-image: url(../images/SkillsBG.png);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 150%;
+}
+
+@media (min-width: 992px) {
+    .skills{
+        background-size: 100%;
+    }
+
+    .skills .container .skills-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+
+/* End skills */
+
+/* Start About Section */
+
+.about{
+    background-image: url(../images/AboutBG.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0% 40%;
+    position: relative;
+    z-index: -2;
+}
+
+.about-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    top: 0;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+/* End About Section */
+
+/* Start Contact */
+
+.contact .row:nth-child(2) i{
+    margin-right: 10px;
+    background-color: #313131;
+    display: block;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 250ms;
+    cursor: pointer;
+    position: relative;
+}
+
+.contact i.fa-facebook-f:hover{
+    background-color: #0072b1;
+}
+
+.contact i.fa-instagram:hover{
+    background-color: #DD2A7B;
+}
+
+.contact i.fa-github:hover{
+    background-color: #383838;
+}
+
+.contact i.fa-linkedin-in:hover{
+    background-color: #0072B1;
+}
+
+.contact i a{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* End Contact */
