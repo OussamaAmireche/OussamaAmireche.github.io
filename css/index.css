@@ -166,24 +166,47 @@ body{
 
 /* Start Skills */
 
+
 .skills{
-    background-image: url(../images/SkillsBG.png);
-    background-position: 100% 100%;
-    background-repeat: no-repeat;
-    background-size: 150%;
+    background-size: 100%;
 }
 
-@media (min-width: 992px) {
-    .skills{
-        background-size: 100%;
-    }
-
-    .skills .container .skills-grid{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
-    }
+.skills .container .skills-grid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* grid-template-columns: repeat(7, 100px);
+    gap: 1em; */
 }
+
+.skills .container .skills-grid .skill{
+    margin: 0px 20px 10px;
+}
+
+.skills .container .skills-grid .skill .skill-img{
+    padding: 10px;
+    background-color: white;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills .container .skills-grid .skill .skill-img img{
+    /* width: 100%; */
+    max-height: 80px;
+    max-width: 60px;
+}
+
+.skills .container .skills-grid .skill .skill-name{
+    margin-top: 10px;
+    text-align: center;
+}
+
 
 /* End skills */
 
